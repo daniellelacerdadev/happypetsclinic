@@ -1044,16 +1044,25 @@ ul {
 
 
 
-@media (max-width: 768px){
+@media (max-width: 800px) {
+
     .navbar-toggler {
-    display: block;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    color: #1E293B;
-    }   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+        z-index: 1002;
+        color: #1E293B;
+        background: #CCFBF1;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
 
     .navbar-collapse {
+        display: flex;
         position: fixed;
         top: 0;
         right: -100%;
@@ -1064,15 +1073,11 @@ ul {
         padding: 5rem 2rem 2rem;
         box-shadow: 0 20px 60px rgba(0,0,0,.15);
         transition: right .3s ease;
-        z-index: 1001
+        z-index: 1001;
     }
 
-    .nav_link {
-        font-size: 1.1rem;
-    }
-
-    .nav_actions {
-        display: none;
+    .navbar-collapse.show {
+        right: 0;
     }
 
     .nav_list {
@@ -1081,13 +1086,19 @@ ul {
         gap: 1.5rem;
     }
 
-     .section {
-        padding:3.5rem 0
+    .nav_actions {
+        display: none;
     }
 
+    .nav_close {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 820px) {
     .navbar-toggler {
     display: none;
     }
@@ -1102,8 +1113,6 @@ ul {
         padding:0;
         box-shadow:none;
     }
-
-
 }
 
 @media (max-width: 1024px) {
@@ -1152,73 +1161,6 @@ ul {
     }
 }
 
-@media (max-width: 768px) {
-   
-    .navbar-collapse.show {
-        right: 0;
-        padding: 5px;
-        width: 200px;
-        background: #F8FAFC;
-    }
-
-    .nav_list {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        padding: 2px;
-    }
-
-    .nav_link {
-        font-size: .9rem;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
-
-    .nav_actions {
-        display: none;
-    }
-
-    .nav_close {
-        display: block;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        color:#1E293B;
-        background: #CCFBF1;
-    }
-
-    .hero {
-        padding: 6rem 0 3rem;
-    }
-
-    .hero_stats {
-        gap: 1.5rem;
-    }
-
-    .services_grid,.benefits_grid,.testimonials_grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about_experience {
-        right: 10px;
-        bottom: -10px;
-        padding: 1rem 1.5rem;
-    }
-
-    .about_features,.footer_grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer_bottom {
-        flex-direction: column;
-        gap: .8rem;
-        text-align: center;
-    }
-
-     
-}
 
    
 
